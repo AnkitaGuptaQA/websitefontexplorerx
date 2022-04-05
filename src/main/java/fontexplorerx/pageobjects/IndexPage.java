@@ -46,7 +46,7 @@ public class IndexPage extends BaseClass {
     @FindBy(linkText = "Help")
     WebElement helpLink;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[3]/header[1]/div[2]/nav[1]/a[5]")
+    @FindBy(xpath = "//a[@class='nav-item'][normalize-space()='Contact']")
     WebElement contactLink;
 
     public  IndexPage(){
@@ -96,6 +96,11 @@ public class IndexPage extends BaseClass {
     public HelpPage clickOnHelp() throws Throwable {
         Action.click(getDriver(),helpLink);
         return new HelpPage();
+    }
+
+    public ContactPage clickOnContact() throws Throwable{
+        Action.click(getDriver(),contactLink);
+        return new ContactPage();
     }
 
 
