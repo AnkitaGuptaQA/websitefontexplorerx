@@ -146,7 +146,7 @@
                         </dependencies>
                     </plugin>-->
 
-            <plugin>
+           <!-- <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
@@ -158,7 +158,7 @@
 
                             </dependency>
 
-                     <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+                     &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin &ndash;&gt;
                      <dependency>
                          <groupId>org.apache.maven.plugins</groupId>
                          <artifactId>maven-surefire-plugin</artifactId>
@@ -166,10 +166,10 @@
                      </dependency>
 
                  </dependencies>
-<!--                <scope>compile</scope>-->
+&lt;!&ndash;                <scope>compile</scope>&ndash;&gt;
                 <configuration>
                     <suiteXmlFiles>
-                        <!--suppress UnresolvedMavenProperty -->
+                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;
                         <suiteXmlFile>${testSuite}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
@@ -179,7 +179,7 @@
                     <useFile>false</useFile>
                 </configuration>
 
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
