@@ -127,14 +127,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
+<!--                <scope>compile</scope>-->
                 <configuration>
                     <suiteXmlFiles>
                         <!--suppress UnresolvedMavenProperty -->
-                        <suiteXmlFile>${xmlFiles}</suiteXmlFile>
+                        <suiteXmlFile>${testSuite}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
                         <appURL>${url}</appURL>
                     </systemPropertyVariables>
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>
