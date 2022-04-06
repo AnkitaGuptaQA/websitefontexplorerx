@@ -20,6 +20,14 @@
 <!--            <version>7.1.0</version>-->
 <!--            <scope>compile</scope>-->
 <!--        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -123,14 +131,28 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
             </plugin>
-            <plugin>
+
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <version>3.0.0-M5</version>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.junit.jupiter</groupId>
+                                <artifactId>junit-jupiter-engine</artifactId>
+                                <version>5.7.0</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+
+            <!--<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M4</version>
-<!--                <scope>compile</scope>-->
+&lt;!&ndash;                <scope>compile</scope>&ndash;&gt;
                 <configuration>
                     <suiteXmlFiles>
-                        <!--suppress UnresolvedMavenProperty -->
+                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;
                         <suiteXmlFile>${testSuite}</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>
@@ -138,7 +160,7 @@
                     </systemPropertyVariables>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
