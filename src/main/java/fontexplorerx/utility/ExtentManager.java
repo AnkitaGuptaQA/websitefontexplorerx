@@ -10,8 +10,9 @@ public class ExtentManager {
 
     public static void setExtent() {
         //htmlReporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/ExtentReport/"+"MyReport_"+BaseClass.getCurrentTime()+".html");
-        htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "/test-output/ExtentReport/" + "MyReport.html");
-        htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
+        htmlReporter = new ExtentHtmlReporter("/Users/fexuser/IdeaProjects/FontExplorerX.com/ExtentReport/" + "MyReport.html");
+       // htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/extent-config.xml");
+        htmlReporter.loadXMLConfig("/Users/fexuser/IdeaProjects/FontExplorerX.com" + "/extent-config.xml");
         //htmlReporter.config().setDocumentTitle("Automation Test Report");
         //htmlReporter.config().setTheme(Theme.DARK);
 
@@ -19,7 +20,7 @@ public class ExtentManager {
         extent.attachReporter(htmlReporter);
 
         extent.setSystemInfo("HostName", "MyHost");
-        extent.setSystemInfo("ProjectName", "FONTEXPLORERX.com");
+        extent.setSystemInfo("ProjectName", "FontExplorerX.com");
         extent.setSystemInfo("Tester", "Ankita Gupta");
         extent.setSystemInfo("OS", "MAC BigSur");
         extent.setSystemInfo("Browser", "Chrome");

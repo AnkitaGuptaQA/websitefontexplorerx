@@ -27,7 +27,7 @@ public class IndexPage extends BaseClass {
     @FindBy(xpath = "//a[normalize-space()='Login or sign up']")
     WebElement signInButton;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[3]/header[1]/div[2]/a[1]")
+    @FindBy(xpath = "//a[@class='logo']")
     WebElement fontexplorerLogo;
 
     @FindBy(xpath = "/html[1]/body[1]/div[3]/header[1]/div[1]/div[1]/div[1]/a[1]")

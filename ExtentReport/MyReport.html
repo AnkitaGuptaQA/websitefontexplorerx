@@ -1,0 +1,1040 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href='http://cdn.rawgit.com/anshooarora/extentreports-java/9fa70d0ed9c34a8ed445ceee3494d3d7de7f8918/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Fontexplorerx.com</title>
+
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>FontExplorerx.com Report
+            
+                <img src='/Users/fexuser/IdeaProjects/FontExplorerX.com/Logo/fontexplorer.png'/>
+            
+        </span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+				<span class='label suite-start-time'>Apr 6, 2022, 5:34:58 PM</span>
+			</a>
+			<a href='#!'>
+				<span class='label'>v3.0.1</span>
+			</a>
+		</ul>
+	</div>
+</nav>
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span><span class='strong'>3</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong'>13</span> test(s) failed, <span class='strong'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span><span class='strong'>3</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong'>39</span> step(s) failed, <span class='strong'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h3>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyLogo</span>
+						<span class='test-time'>Apr 6, 2022, 5:35:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:35:11 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:35:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+106ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:12 PM</td>
+					<td class='step-details'>Pass Test case is: verifyLogo</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>verifytitle</span>
+						<span class='test-time'>Apr 6, 2022, 5:35:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:35:22 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:35:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+10ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:35:22 PM</td>
+					<td class='step-details'>Pass Test case is: verifytitle</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>endToEndTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:35:33 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:35:33 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:35:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+144ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:35:46 PM</td>
+					<td class='step-details'><span class='label white-text red'>endToEndTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:35:46 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c45c6be47301c203677caa66b88fe5e1, actions {actions=[org.openqa.selenium.interactions.Sequence@4f3e7344]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:52119}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52119/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c45c6be47301c203677caa66b88fe5e1 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:35:47 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsendToEndTest_20220406053546.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsendToEndTest_20220406053546.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>homepageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:35:57 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:35:57 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:36:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 26s+23ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:36:22 PM</td>
+					<td class='step-details'><span class='label white-text red'>homepageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:36:22 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [299ea1219764279d01772cf7d609e9ce, actions {actions=[org.openqa.selenium.interactions.Sequence@1e0895f5]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:52266}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52266/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 299ea1219764279d01772cf7d609e9ce - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:36:23 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotshomepageTest_20220406053622.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotshomepageTest_20220406053622.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>navigateToHelp</span>
+						<span class='test-time'>Apr 6, 2022, 5:36:34 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:36:34 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:36:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+477ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:36:54 PM</td>
+					<td class='step-details'><span class='label white-text red'>navigateToHelp - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:36:54 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f1806370b66fb65d7d8387d02a4c9c04, actions {actions=[org.openqa.selenium.interactions.Sequence@3a66e67e]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:52465}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52465/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: f1806370b66fb65d7d8387d02a4c9c04 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:36:55 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsnavigateToHelp_20220406053654.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsnavigateToHelp_20220406053654.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>verifyForgetPassword</span>
+						<span class='test-time'>Apr 6, 2022, 5:37:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:37:07 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:37:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+842ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>5:37:13 PM</td>
+					<td class='step-details'>Pass Test case is: verifyForgetPassword</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>createAccountTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:37:23 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:37:23 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:38:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 47s+894ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:38:11 PM</td>
+					<td class='step-details'><span class='label white-text red'>createAccountTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:38:11 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"a[href='/account']"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [82cfe14530c2f2d4742777b897c07f07, findElement {using=css selector, value=a[href='/account']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:52727}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52727/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 82cfe14530c2f2d4742777b897c07f07 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:38:11 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotscreateAccountTest_20220406053811.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotscreateAccountTest_20220406053811.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>freeTrialTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:38:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:38:22 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:39:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 45s+202ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:39:06 PM</td>
+					<td class='step-details'><span class='label white-text red'>freeTrialTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:39:06 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3c6612c4d12f8af7195228a23eae2ffc, actions {actions=[org.openqa.selenium.interactions.Sequence@3cc30dee]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:52900}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52900/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3c6612c4d12f8af7195228a23eae2ffc - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:39:07 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsfreeTrialTest_20220406053906.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsfreeTrialTest_20220406053906.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>checkoutPageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:39:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:39:18 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:39:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+57ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:39:30 PM</td>
+					<td class='step-details'><span class='label white-text red'>checkoutPageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:39:30 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [265a609712e861c5caaea74b2fcae0a1, actions {actions=[org.openqa.selenium.interactions.Sequence@da4cf09]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:53084}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53084/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 265a609712e861c5caaea74b2fcae0a1 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:39:31 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotscheckoutPageTest_20220406053930.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotscheckoutPageTest_20220406053930.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>addToCartTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:39:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:39:41 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:40:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+622ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:03 PM</td>
+					<td class='step-details'><span class='label white-text red'>addToCartTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:03 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//td[4]"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [94c2ed99aaaa039833b8e9fac12a09a1, findElement {using=xpath, value=//td[4]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:53250}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53250/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 94c2ed99aaaa039833b8e9fac12a09a1 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:04 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsaddToCartTest_20220406054003.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsaddToCartTest_20220406054003.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>productPageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:40:14 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:40:14 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:40:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+685ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:26 PM</td>
+					<td class='step-details'><span class='label white-text red'>productPageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:26 PM</td>
+					<td class='step-details'><span class='label white-text red'>java.lang.AssertionError: expected [true] but found [false] - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:27 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsproductPageTest_20220406054026.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsproductPageTest_20220406054026.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>specialOfferPageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:40:37 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:40:37 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:40:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+668ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:49 PM</td>
+					<td class='step-details'><span class='label white-text red'>specialOfferPageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:49 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Special offers for Students and Educators.']"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e2de073e7d2cbf8aa6b294f0b3269cf2, findElement {using=xpath, value=//h1[normalize-space()='Special offers for Students and Educators.']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:53541}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53541/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e2de073e7d2cbf8aa6b294f0b3269cf2 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:40:49 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsspecialOfferPageTest_20220406054049.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsspecialOfferPageTest_20220406054049.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>upgradePageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:41:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:41:00 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:41:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+144ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:41:12 PM</td>
+					<td class='step-details'><span class='label white-text red'>upgradePageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:41:12 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[normalize-space()='Upgrade Version']"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1d6581e0fbae70ff2eb35363a8fa5f99, findElement {using=xpath, value=//h1[normalize-space()='Upgrade Version']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:53677}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53677/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1d6581e0fbae70ff2eb35363a8fa5f99 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:41:13 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsupgradePageTest_20220406054112.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsupgradePageTest_20220406054112.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>loginTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:41:23 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:41:23 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:41:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+319ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:41:48 PM</td>
+					<td class='step-details'><span class='label white-text red'>loginTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:41:48 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4f4c8ba057ffadaa2371812ee050f41f, actions {actions=[org.openqa.selenium.interactions.Sequence@71b97eeb]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:53823}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53823/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f4c8ba057ffadaa2371812ee050f41f - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:41:48 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsloginTest_20220406054148.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsloginTest_20220406054148.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>featurePageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:41:59 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:41:59 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:42:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+770ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:42:09 PM</td>
+					<td class='step-details'><span class='label white-text red'>featurePageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:42:09 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h1[@class='features-headline']"}
+  (Session info: chrome=100.0.4896.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ffb2fd35a3fbb56f8074f949e89b0379, findElement {using=xpath, value=//h1[@class='features-headline']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:53976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53976/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ffb2fd35a3fbb56f8074f949e89b0379 - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:42:10 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsfeaturePageTest_20220406054209.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotsfeaturePageTest_20220406054209.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>logoutPageTest</span>
+						<span class='test-time'>Apr 6, 2022, 5:42:20 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Apr 6, 2022, 5:42:20 PM</span>
+	<span class='label end-time'>Apr 6, 2022, 5:42:46 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+633ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:42:45 PM</td>
+					<td class='step-details'><span class='label white-text red'>logoutPageTest - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:42:45 PM</td>
+					<td class='step-details'><span class='label white-text red'>org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Ankitas-MacBook-Pro.local', ip: '2400:1a00:b030:84cb:9d7f:1aae:e2ec:2453%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.6.4', java.version: '18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1b9c2e53dfd323a003b914fdfb984b4e, actions {actions=[org.openqa.selenium.interactions.Sequence@2864f887]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.75, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: /var/folders/lc/z6m9r3lx617...}, goog:chromeOptions: {debuggerAddress: localhost:54115}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:54115/devtoo..., se:cdpVersion: 100.0.4896.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1b9c2e53dfd323a003b914fdfb984b4e - Test Case Failed</span></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>5:42:46 PM</td>
+					<td class='step-details'>ScreenShot is Attached<img data-featherlight='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotslogoutPageTest_20220406054245.png' width='10%' src='' data-src='/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/ScreenshotslogoutPageTest_20220406054245.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>16</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>42</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 6, 2022, 5:34:58 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 6, 2022, 5:42:47 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>468,301ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>HostName</td>
+								<td>MyHost</td>
+							</tr>
+							<tr>
+								<td>ProjectName</td>
+								<td>FontExplorerX.com</td>
+							</tr>
+							<tr>
+								<td>Tester</td>
+								<td>Ankita Gupta</td>
+							</tr>
+							<tr>
+								<td>OS</td>
+								<td>MAC BigSur</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>Chrome</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view --><!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 3,
+				failParent: 13,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 13,
+				
+				passChild: 3,
+				failChild: 39,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 39,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+
+		<script src='http://cdn.rawgit.com/anshooarora/extentreports-java/9fa70d0ed9c34a8ed445ceee3494d3d7de7f8918/dist/js/extent.js' type='text/javascript'></script>
+
+		
+	</body>
+	
+</html>

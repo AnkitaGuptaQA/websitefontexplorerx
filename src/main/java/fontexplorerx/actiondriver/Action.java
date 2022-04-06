@@ -671,14 +671,14 @@ public class Action extends BaseClass {
         TakesScreenshot takesScreenshot = (TakesScreenshot) getDriver();
         File source = takesScreenshot.getScreenshotAs(OutputType.FILE);
         //String destination = System.getProperty("user.dir") + "\\ScreenShots\\" + filename + "_" + dateName + ".png";
-        String destination = "/Users/fexuser/IdeaProjects/FontExplorerX.com/Screenshots" + filename + "_" + dateName + ".png";
+        String destination = "/Users/fexuser/IdeaProjects/FontExplorerX.com/Screenshots/Screenshots" + filename + "_" + dateName + ".png";
         try {
             FileUtils.copyFile(source, new File(destination));
         } catch (Exception e) {
             e.getMessage();
         }
         // This new path for jenkins
-        String newImageString = "/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots" + filename + "_"
+        String newImageString = "/Users/fexuser/IdeaProjects/Fontexplorerx.com/Screenshots/Screenshots" + filename + "_"
                 + dateName + ".png";
         return newImageString;
     }
