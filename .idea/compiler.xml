@@ -9,9 +9,8 @@
         <module name="FontExplorerX.com" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
-  </component>
-  <component name="JavacSettings">
-    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
+    <bytecodeTargetLevel>
+      <module name="FontExplorerX.com" target="18" />
+    </bytecodeTargetLevel>
   </component>
 </project>
