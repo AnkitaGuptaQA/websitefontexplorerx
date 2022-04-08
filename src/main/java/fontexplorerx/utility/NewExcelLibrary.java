@@ -18,7 +18,7 @@ public class NewExcelLibrary {
     private XSSFRow row = null;
     private XSSFCell cell = null;
 
-    /*public NewExcelLibrary() {
+    public NewExcelLibrary() {
 
         this.path=path;
         try {
@@ -30,7 +30,7 @@ public class NewExcelLibrary {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-    }*/
+    }
 
     public NewExcelLibrary(String path) {
 
