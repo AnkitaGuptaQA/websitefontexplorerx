@@ -14,13 +14,13 @@ public class AddToCartPage extends BaseClass {
     @FindBy(xpath = "//a[normalize-space()='Products']")
     WebElement redirectProduct;
 
-    @FindBy(id = "LicenseQuantity")
+    @FindBy(xpath = "//select[@id='LicenseQuantity']")
     WebElement licQuantity;
 
     @FindBy(xpath = "//a[@class='btn-blue']")
     WebElement proCheckout;
 
-    @FindBy(xpath = "//td[4]")
+    @FindBy(css = "td:nth-child(4)")
     WebElement unitprice;
     @FindBy(xpath = "/html/body/div[1]/div/section/div[2]/div/table/tfoot/tr[2]/td/span/span")
     WebElement totalprice;

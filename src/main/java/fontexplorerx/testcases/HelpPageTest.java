@@ -24,13 +24,13 @@ public class HelpPageTest extends BaseClass {
        boolean title = helpPage.verifyTitle();
        Assert.assertTrue(true);
 
-       Log.info("Navigate to the download section");
+     Log.info("Navigate to the download section");
        helpPage.downloadsButton();
 
-       Log.info("Download the windows build.");
+      Log.info("Download the windows build.");
+      Thread.sleep(3000);
        helpPage.downloadWindowsBuilds();
        Thread.sleep(3000);
-
        Log.info("Download the server build");
        helpPage.downloasServerBuild();
 

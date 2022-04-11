@@ -27,8 +27,10 @@ public class HomePageTest extends BaseClass {
         String expectedname = "ANKITA GUPTA";
         Assert.assertEquals(validatename,expectedname);
         Log.info("validate if the logout is displayed.");
-        String checklogouttext = homePage.validatelogoutText();
-        Assert.assertEquals(checklogouttext,"LOGOUT");
+        Boolean logouttitle = homePage.verifyText();
+        Assert.assertTrue(logouttitle);
+//        String checklogouttext = homePage.validatelogoutText();
+//        Assert.assertEquals(checklogouttext,"LOGOUT");
         Log.endTestCase("homepageTest");
     }
 }

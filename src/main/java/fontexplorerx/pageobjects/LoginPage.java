@@ -8,13 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends BaseClass{
 
-    @FindBy(id = "signInEmail")
+    @FindBy(xpath = "//input[@id='signInEmail']")
     WebElement email;
 
-    @FindBy(id = "signInPassword")
+    @FindBy(xpath = "//input[@id='signInPassword']")
     WebElement password;
 
-    @FindBy(xpath = "/html[1]/body[1]/div[3]/div[1]/section[1]/div[3]/div[1]/section[1]/form[1]/button[1]")
+    @FindBy(xpath = "//button[normalize-space()='Login']")
     WebElement signInButton;
 
     @FindBy(id = "FirstName")
@@ -81,6 +81,9 @@ public class LoginPage extends BaseClass{
         Action.type(signupEmail, signupemail);
         Action.type(signUpPassword, signuppassword);
         Action.type(signUpPasswordConfirmation,signuppasswordconfirm);
+        return new HomePage();
+    }
+    public HomePage clickOnCreateAccount()throws Throwable{
         Action.click(BaseClass.getDriver(),createNewAccount);
         return new HomePage();
     }

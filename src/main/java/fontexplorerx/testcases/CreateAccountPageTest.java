@@ -32,13 +32,14 @@ public class CreateAccountPageTest extends BaseClass {
                 prop.getProperty("signuppassword"),
                 prop.getProperty("signuppasswordconfirm"));
         System.out.println(signinemail);
+        loginPage.clickOnCreateAccount();
         Log.info("Validate if the logged in user name is displayed.");
         String validatename = homePage.validateloggedusername();
         String expectedname = "TEST NAME";
         Assert.assertEquals(validatename,expectedname);
         Log.info("validate if the logout is displayed.");
-        String checklogouttext = homePage.validatelogoutText();
-        Assert.assertEquals(checklogouttext,"LOGOUT");
+        Boolean logouttitle = homePage.verifyText();
+        Assert.assertTrue(logouttitle);
         Log.endTestCase("createAccountTest");
     }
 }

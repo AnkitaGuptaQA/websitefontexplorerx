@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Action extends BaseClass {
 
-    public void scrollByVisibilityOfElement( WebElement ele) {
+    public static void scrollByVisibilityOfElement( WebElement ele) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", ele);
     }

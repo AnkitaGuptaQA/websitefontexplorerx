@@ -10,9 +10,8 @@ public class HomePage extends BaseClass {
     @FindBy(css = "a[href='/account']")
     WebElement loggedinUserName;
 
-    @FindBy(css = "a[href='/logout']")
-    WebElement Logoutlink;
-
+    @FindBy(xpath = "//a[normalize-space()='Logout']")
+    WebElement logoutText;
 
     public HomePage(){
         PageFactory.initElements(getDriver(), this);
@@ -30,9 +29,14 @@ public class HomePage extends BaseClass {
         return loggedUserName;
     }
 
-    public String validatelogoutText(){
-        String logoutText = Logoutlink.getText();
-        return logoutText;
+    public boolean verifyText() throws Throwable{
+        return Action.isDisplayed(getDriver(),logoutText);
+    }
+
+    public LoginPage clickOnLogout() throws Throwable {
+        Action.click(getDriver(),logoutText);
+        return new LoginPage();
+
     }
 
     public String getcurrURL(){

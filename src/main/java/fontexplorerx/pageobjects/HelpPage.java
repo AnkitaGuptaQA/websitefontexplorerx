@@ -11,17 +11,17 @@ public class HelpPage extends BaseClass {
     @FindBy(xpath = "//h1[normalize-space()='Help']")
     WebElement helpTitle;
 
-    @FindBy(xpath = "//a[normalize-space()='Downloads']")
+    @FindBy(xpath = "//body/div[1]/div[1]/section[1]/div[1]/div[1]/nav[1]/a[2]")
     WebElement clickOnDownloads;
 
     @FindBy(xpath = "//a[@class='btn-blue js-link-tooltip']")
     WebElement downloadMacBuild;
 
-    @FindBy(xpath = "//div[@id='dbcms-content-2t46']//a[@class='btn-blue'][normalize-space()='Download']")
+    @FindBy(xpath = "//body/div[1]/div[1]/section[1]/div[1]/div[2]/div[2]/div[3]/div[1]/section[1]/div[3]/a[1]")
     WebElement downloadWindowsBuild;
 
 //    @FindBy(xpath = "//a[@href='https://fex.linotype.com/download/server/FontExplorerXServer.zip']")
-    @FindBy(xpath = "//body/div[3]/div[1]/section[1]/div[1]/div[3]/div[2]/div[2]/div[1]/section[1]/div[3]/a[1]")
+    @FindBy(xpath = "//body/div[1]/div[1]/section[1]/div[1]/div[3]/div[2]/div[2]/div[1]/section[1]/div[3]/a[1]")
     WebElement downloadServerBuild;
 
     public HelpPage(){
@@ -32,6 +32,7 @@ public class HelpPage extends BaseClass {
     }
 
     public HelpPage downloadsButton() throws Throwable {
+//        Action.scrollByVisibilityOfElement(clickOnDownloads);
         Action.click(getDriver(),clickOnDownloads);
         return new HelpPage();
     }

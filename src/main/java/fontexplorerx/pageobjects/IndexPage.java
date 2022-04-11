@@ -11,7 +11,7 @@ public class IndexPage extends BaseClass {
     //Redirect to the free trial page by link text
 //    @FindBy(xpath = "html body div.page header.page-header div.header-inner nav.page-nav a.nav-item")
 //    WebElement freeTriallink;
-    @FindBy(css ="div.page:nth-child(4) header.page-header div.header-inner nav.page-nav > a.nav-item:nth-child(1)")
+    @FindBy(xpath = "//header/div[2]/nav[1]/a[1]")
     WebElement freeTrial;
 //    @FindBy(css = "body > div.page > header > div.header-inner > nav > a:nth-child(1)")
 //    WebElement freeTriallink;
@@ -37,13 +37,13 @@ public class IndexPage extends BaseClass {
     WebElement buyNowButton;
 
 
-    @FindBy(linkText = "Features")
+    @FindBy(xpath = "//header/div[2]/nav[1]/a[2]")
     WebElement featureLink;
 
     @FindBy(xpath = "//a[normalize-space()='Products']")
     WebElement productLink;
 
-    @FindBy(linkText = "Help")
+    @FindBy(xpath = "//header/div[2]/nav[1]/a[4]")
     WebElement helpLink;
 
     @FindBy(xpath = "//a[@class='nav-item'][normalize-space()='Contact']")

@@ -24,6 +24,14 @@ public class LogOutPageTest extends BaseClass {
         loginPage = indexPage.clickOnSignIn();
         Log.info("Enter the details");
         homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password") );
+        Log.info("Verify the title of the page");
+        boolean title;
+        title = homePage.verifyText();
+        Assert.assertTrue(title);
+        Thread.sleep(5000);
+        Log.info("Logout from the application");
+        homePage.clickOnLogout();
+
         Log.endTestCase("loginTest");
     }
 }
