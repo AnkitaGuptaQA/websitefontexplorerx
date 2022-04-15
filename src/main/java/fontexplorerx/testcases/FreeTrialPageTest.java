@@ -26,7 +26,7 @@ public class FreeTrialPageTest extends BaseClass {
         Log.info("Assert with the title of the free trial page");
         String titleft = freeTrialPage.titletime();
         System.out.println("The title of the page is:" +titleft);
-        String atitle = "Try everything FontExplorer® has to offer on macOS, completely unrestricted, with a 14-day free trial.";
+        String atitle = "Try everything FontExplorer® X has to offer on macOS, completely unrestricted, with a 30-day free trial.";
         Assert.assertEquals(titleft,atitle);
 
         Log.info("Click on the download free trial button.");
