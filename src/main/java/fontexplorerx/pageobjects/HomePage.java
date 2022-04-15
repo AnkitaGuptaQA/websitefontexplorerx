@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BaseClass {
-    @FindBy(css = "a[href='/account']")
+    @FindBy(css = "span[class='user-info'] a")
     WebElement loggedinUserName;
 
     @FindBy(xpath = "//a[normalize-space()='Logout']")

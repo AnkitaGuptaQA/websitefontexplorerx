@@ -41,7 +41,7 @@ public class LoginPage extends BaseClass{
     @FindBy(id = "PasswordConfirmation")
     WebElement signUpPasswordConfirmation;
 
-    @FindBy(xpath = "//button[normalize-space()='Create Account']")
+    @FindBy(css = "div[class='form-left'] button[type='submit']")
     WebElement createNewAccount;
 
     @FindBy(xpath = "/html/body/div[3]/div/section/div[2]/div/section/h1")

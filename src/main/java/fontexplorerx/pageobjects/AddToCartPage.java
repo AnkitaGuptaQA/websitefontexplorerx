@@ -17,7 +17,7 @@ public class AddToCartPage extends BaseClass {
     @FindBy(xpath = "//select[@id='LicenseQuantity']")
     WebElement licQuantity;
 
-    @FindBy(xpath = "//a[@class='btn-blue']")
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/section[1]/div[2]/div[1]/table[1]/tfoot[1]/tr[3]/td[1]/a[1]")
     WebElement proCheckout;
 
     @FindBy(css = "td:nth-child(4)")

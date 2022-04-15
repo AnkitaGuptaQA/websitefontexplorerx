@@ -12,8 +12,8 @@ public class ProductsPage extends BaseClass {
     @FindBy(xpath = "//h1[normalize-space()='Take control of your font collection.']")
     WebElement productTitle;
 
-    @FindBy(xpath = "//input[@value='Buy']")
-    WebElement proBuyButton;
+@FindBy(xpath = "//input[@class='btn-buy dev-product-action-selector']")
+WebElement proBuyButton;
 
     @FindBy(xpath = "//a[@class='btn-blue-small dev-product-action-selector']")
     WebElement upgradeBuyButton;
