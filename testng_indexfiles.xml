@@ -8,6 +8,7 @@
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
             <class name="fontexplorerx.testcases.IndexPageTest" />
+            <class name="fontexplorerx.testcases.FreeTrialPageTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
