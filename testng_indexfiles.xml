@@ -10,6 +10,7 @@
             <class name="fontexplorerx.testcases.IndexPageTest" />
             <class name="fontexplorerx.testcases.FreeTrialPageTest"/>
             <class name="fontexplorerx.testcases.FeaturesPageTest"/>
+            <class name="fontexplorerx.testcases.ContactPageTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
