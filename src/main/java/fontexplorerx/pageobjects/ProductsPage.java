@@ -9,11 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductsPage extends BaseClass {
 
-    @FindBy(xpath = "//h1[normalize-space()='Take control of your font collection.']")
+    @FindBy(xpath = "//h1[contains(text(),'Take control of your font collection.')]")
     WebElement productTitle;
 
-@FindBy(xpath = "//input[@class='btn-buy dev-product-action-selector']")
-WebElement proBuyButton;
+@FindBy(xpath = "//body/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/section[1]/div[1]/form[1]/input[2]")
+//@FindBy(xpath = "//input[@class='btn-buy dev-product-action-selector']")
+    WebElement proBuyButton;
+
+@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/section[1]/div[1]/form[1]/input[2]")
+WebElement buyButton;
 
     @FindBy(xpath = "//a[@class='btn-blue-small dev-product-action-selector']")
     WebElement upgradeBuyButton;
@@ -27,7 +31,7 @@ WebElement proBuyButton;
     @FindBy(xpath = "//p[normalize-space()='Serial Number is required.']")
     WebElement blankVerification;
 
-    @FindBy(xpath = "//input[@value='Upgrade']")
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/div[1]/form[1]/input[1]")
     WebElement upgradeButton;
 
     @FindBy(xpath = "//h1[normalize-space()='Special offers for Students and Educators.']")
@@ -48,13 +52,20 @@ WebElement proBuyButton;
         Action.click(getDriver(),proBuyButton);
         return new AddToCartPage();
     }
+    public AddToCartPage clickOnBuyButton() throws Throwable {
+        Action.scrollByVisibilityOfElement(buyButton);
+        Action.click(getDriver(),buyButton);
+        return new AddToCartPage();
+    }
 
     public ProductPageTest clickOnUpgradeButton() throws Throwable{
+        Action.scrollByVisibilityOfElement(upgradeBuyButton);
         Action.click(getDriver(),upgradeBuyButton);
         return new ProductPageTest();
     }
 
     public AddToCartPage clickOnStudent() throws Throwable{
+        Action.scrollByVisibilityOfElement(studentLink);
         Action.click(getDriver(),studentLink);
         return new AddToCartPage();
     }
@@ -76,6 +87,7 @@ WebElement proBuyButton;
     }
 
     public AddToCartPage clickOnStudentBuyButton() throws Throwable {
+        Action.scrollByVisibilityOfElement(studentBuyButton);
         Action.click(getDriver(),studentBuyButton);
         return new AddToCartPage();
     }

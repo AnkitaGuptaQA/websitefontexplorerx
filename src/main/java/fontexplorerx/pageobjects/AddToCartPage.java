@@ -20,7 +20,7 @@ public class AddToCartPage extends BaseClass {
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/section[1]/div[2]/div[1]/table[1]/tfoot[1]/tr[3]/td[1]/a[1]")
     WebElement proCheckout;
 
-    @FindBy(css = "td:nth-child(4)")
+    @FindBy(css= "td:nth-child(4)")
     WebElement unitprice;
     @FindBy(xpath = "/html/body/div[1]/div/section/div[2]/div/table/tfoot/tr[2]/td/span/span")
     WebElement totalprice;
@@ -28,7 +28,7 @@ public class AddToCartPage extends BaseClass {
 //    @FindBy(css = ".cart-total > span:nth-child(1)")
 //    WebElement totalprice;
 
-    @FindBy(xpath = "//h1[normalize-space()='Your Cart']")
+    @FindBy(xpath = "//h1[contains(text(),'Your Cart')]")
     WebElement cartTitle;
 
     @FindBy(xpath = "//input[@id='VoucherCode']")

@@ -25,7 +25,7 @@ public class AddToCartPageTest extends BaseClass {
         productsPage = indexPage.clickOnProduct();
 
         Log.info("Click on the pro button");
-        addToCartPage = productsPage.clickOnProButton();
+        addToCartPage = productsPage.clickOnBuyButton();
 
         Log.info("Enter the quantity of the license.");
         addToCartPage.enterqqantity(prop.getProperty("licenseQuan"));

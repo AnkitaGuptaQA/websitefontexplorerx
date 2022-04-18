@@ -20,13 +20,16 @@ public class ProductPageTest extends BaseClass {
 
         Log.info("Navigated to the product page");
         productsPage = indexPage.clickOnProduct();
-
         Log.info("Assert the product page title.");
         boolean result = productsPage.getProductTitle();
+        System.out.println(result);
         Assert.assertTrue(result);
 
         Log.info("Click on the pro button.");
-        addToCartPage = productsPage.clickOnProButton();
+        Thread.sleep(5000);
+        //addToCartPage = productsPage.clickOnProButton();
+        addToCartPage = productsPage.clickOnBuyButton();
+        Thread.sleep(5000);
 
         Log.info("Validate the title of the cart page");
         boolean atcresult = addToCartPage.getCartTitle();
@@ -34,7 +37,7 @@ public class ProductPageTest extends BaseClass {
         Log.endTestCase("productPageTest");
     }
 
-    @Test
+   @Test
     public void upgradePageTest() throws Throwable{
         Log.startTestCase("UpgradePageTest");
         Log.info("Navigated to the index page.");
