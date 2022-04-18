@@ -8,6 +8,7 @@
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
             <class name="fontexplorerx.testcases.AddToCartPageTest" />
+
         </classes>
-               </test> <!-- Test -->
-            </suite> <!-- Suite -->
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
