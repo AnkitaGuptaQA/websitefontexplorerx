@@ -32,7 +32,7 @@ public class CheckoutPage extends BaseClass {
     @FindBy(xpath = "//input[@id='CheckOutCardPayment_LicensesAndTerms']")
     WebElement paymentTerms;
 
-    @FindBy(xpath = "//button[@type='button']")
+    @FindBy(xpath = "//button[contains(text(),'Place Your Order')]")
     WebElement placeOrderButton;
 
 
@@ -64,6 +64,7 @@ public class CheckoutPage extends BaseClass {
         return new CheckoutPage();
     }
     public ThankYouPage clickOnPlaceYourOrder() throws Throwable {
+        Action.scrollByVisibilityOfElement(placeOrderButton);
         Action.click(getDriver(),placeOrderButton);
         return new ThankYouPage();
     }

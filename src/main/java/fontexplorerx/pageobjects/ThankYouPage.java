@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ThankYouPage extends BaseClass {
-@FindBy(xpath = "//h1[normalize-space()='Thank you!']")
+@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/section[1]/section[1]/h1[1]")
     WebElement thankyouTitle;
 
 @FindBy(xpath = "//button[normalize-space()='Download License']")

@@ -41,7 +41,7 @@ public class LoginPage extends BaseClass{
     @FindBy(id = "PasswordConfirmation")
     WebElement signUpPasswordConfirmation;
 
-    @FindBy(css = "div[class='form-left'] button[type='submit']")
+    @FindBy(xpath = "//button[contains(text(),'Create Account')]")
     WebElement createNewAccount;
 
     @FindBy(xpath = "/html/body/div[3]/div/section/div[2]/div/section/h1")
@@ -84,6 +84,7 @@ public class LoginPage extends BaseClass{
         return new HomePage();
     }
     public HomePage clickOnCreateAccount()throws Throwable{
+        Action.scrollByVisibilityOfElement(createNewAccount);
         Action.click(BaseClass.getDriver(),createNewAccount);
         return new HomePage();
     }

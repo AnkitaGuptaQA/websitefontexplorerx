@@ -32,8 +32,9 @@ public class CreateAccountPageTest extends BaseClass {
                 prop.getProperty("signuppassword"),
                 prop.getProperty("signuppasswordconfirm"));
         System.out.println(signinemail);
+        Thread.sleep(3000);
         loginPage.clickOnCreateAccount();
-        Log.info("Validate if the logged in user name is displayed.");
+      Log.info("Validate if the logged in user name is displayed.");
         String validatename = homePage.validateloggedusername();
         String expectedname = "TEST NAME";
         Assert.assertEquals(validatename,expectedname);

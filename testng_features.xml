@@ -8,6 +8,14 @@
         <parameter name="browser" value="Chrome"></parameter>
         <classes>
             <class name="fontexplorerx.testcases.AddToCartPageTest" />
+            <class name="fontexplorerx.testcases.CheckoutPageTest"/>
+            <class name="fontexplorerx.testcases.CreateAccountPageTest"/>
+            <class name="fontexplorerx.testcases.ForgotPasswordPageTest"/>
+            <class name="fontexplorerx.testcases.HomePageTest"/>
+            <class name="fontexplorerx.testcases.LoginPageTest"/>
+            <class name="fontexplorerx.testcases.LogOutPageTest"/>
+
+
 
         </classes>
     </test> <!-- Test -->
