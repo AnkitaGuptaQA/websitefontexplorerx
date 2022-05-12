@@ -59,13 +59,14 @@ public class BaseClass {
     public static void launchApp() throws Throwable {
         // WebDriverManager.chromedriver().setup();
         String browserName = prop.getProperty("browser");
-        String browserName1 = prop.getProperty("browser");
+       // String browserName1 = prop.getProperty("browser");
         downloadFilepath = "/Users/fexuser/Downloads";
 
         if (browserName.equalsIgnoreCase("Chrome")){
             chromedriver().setup();
-            //ChromeOptions options = new ChromeOptions();
-            HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("headless");
+            /*HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
             chromePrefs.put("profile.default_content_setting.popups", 0);
             chromePrefs.put("download.default_directory", downloadFilepath);
             ChromeOptions options = new ChromeOptions();
@@ -73,7 +74,7 @@ public class BaseClass {
             options.setExperimentalOption("prefs", chromePrefs);
             options.addArguments("--test-type");
             options.addArguments("--disable-extensions"); //to disable browser extension popup
-
+*/
            /* DesiredCapabilities cap = DesiredCapabilities.chrome();
             cap.setCapability(ChromeOptions.CAPABILITY, chromeOptionsMap);
             cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
@@ -81,7 +82,8 @@ public class BaseClass {
             // for the normal browser
             driver.set((new ChromeDriver()));
             // Run the project in the headless browser.
-//            driver.set(new ChromeDriver(cap));
+//            driver.set(new ChromeDriver(options));
+
         }else if (browserName.equalsIgnoreCase("Firefox")){
             firefoxdriver().setup();
             FirefoxOptions options = new FirefoxOptions();

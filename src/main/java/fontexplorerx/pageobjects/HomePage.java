@@ -34,7 +34,7 @@ public class HomePage extends BaseClass {
     }
 
     public LoginPage clickOnLogout() throws Throwable {
-        Action.click(getDriver(),logoutText);
+        Action.fluentWait(getDriver(),logoutText,3000);
         return new LoginPage();
 
     }

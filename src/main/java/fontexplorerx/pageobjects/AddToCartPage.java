@@ -84,12 +84,12 @@ public class AddToCartPage extends BaseClass {
         }
 
         public LoginPage proceedToCheckout() throws Throwable {
-            Action.click(getDriver(),proCheckout);
+            Action.fluentWait(getDriver(),proCheckout,3000);
             return new LoginPage();
         }
 
         public AddToCartPage clickOnRedeem() throws Throwable {
-        Action.click(getDriver(),redeemButton);
+        Action.fluentWait(getDriver(),redeemButton,3000);
         return new AddToCartPage();
         }
 

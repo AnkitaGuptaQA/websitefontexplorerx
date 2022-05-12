@@ -63,43 +63,43 @@ public class IndexPage extends BaseClass {
     }
 
     public FreeTrialPage clickOnDownloadTrial() throws Throwable {
-        Action.click(getDriver(),downloadButtonFreeTrial);
+        Action.fluentWait(getDriver(),downloadButtonFreeTrial,3000);
         return new FreeTrialPage();
     }
 
     public FreeTrialPage clickOnFreeTrial() throws Throwable {
         Action.fluentWait(getDriver(),freeTrial,5000);
-        Action.click(getDriver(),freeTrial);
+//        Action.click(getDriver(),freeTrial);
         return new FreeTrialPage();
     }
 
     public LoginPage clickOnSignIn() throws Throwable {
-        Action.click(getDriver(),signInButton);
+        Action.fluentWait(getDriver(),signInButton,3000);
         return new LoginPage();
     }
 
     public ProductsPage clickOnProduct() throws Throwable{
-        Action.click(getDriver(),productLink);
+        Action.fluentWait(getDriver(),productLink,3000);
         return new ProductsPage();
     }
 
     public AddToCartPage clickOnCart () throws Throwable {
-        Action.click(getDriver(),cartIcon);
+        Action.fluentWait(getDriver(),cartIcon,3000);
         return new AddToCartPage();
     }
 
     public FeaturesPage clickOnFeatures() throws Throwable {
-        Action.click(getDriver(),featureLink);
+        Action.fluentWait(getDriver(),featureLink,3000);
         return new FeaturesPage();
     }
 
     public HelpPage clickOnHelp() throws Throwable {
-        Action.click(getDriver(),helpLink);
+        Action.fluentWait(getDriver(),helpLink,3000);
         return new HelpPage();
     }
 
     public ContactPage clickOnContact() throws Throwable{
-        Action.click(getDriver(),contactLink);
+        Action.fluentWait(getDriver(),contactLink,3000);
         return new ContactPage();
     }
 

@@ -45,7 +45,7 @@ public class ForgotPasswordPage extends BaseClass {
     }
 
     public ForgotPasswordPage clickOnForgotPassword() throws Throwable {
-        Action.click(getDriver(),forgotPasswordButton);
+        Action.fluentWait(getDriver(),forgotPasswordButton,3000);
         return new ForgotPasswordPage();
     }
 

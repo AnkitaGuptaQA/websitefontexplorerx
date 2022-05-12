@@ -20,8 +20,15 @@ public class LogoutPage extends BaseClass {
     }
 
     public LogoutPage clickOnLogout() throws Throwable {
-        Action.click(getDriver(),logoutText);
+        Action.fluentWait(getDriver(),logoutText,3000);
+//        Action.click(getDriver(),logoutText);
         return new LogoutPage();
+
+    }
+    public IndexPage clickOnLogoutPage() throws Throwable {
+        Action.fluentWait(getDriver(),logoutText,3000);
+//        Action.click(getDriver(),logoutText);
+        return new IndexPage();
 
     }
 }

@@ -1,8 +1,10 @@
 package fontexplorerx.testcases;
 
+import fontexplorerx.actiondriver.Action;
 import fontexplorerx.base.BaseClass;
 import fontexplorerx.pageobjects.*;
 import fontexplorerx.utility.Log;
+import org.checkerframework.checker.units.qual.A;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -50,13 +52,21 @@ public class ProductPageTest extends BaseClass {
         productsPage.clickOnUpgradeButton();
 
         Log.info("Verify the title of the page.");
-        String titleUpgrade = productsPage.verifyUpgradeTitle();
-        Assert.assertEquals(titleUpgrade,"Upgrade Version");
+        Boolean titleUpgrade = productsPage.verifyUpgradeTitle();
+        Assert.assertTrue(titleUpgrade);
 
         Log.info("Verify the validation message for the blank click");
         productsPage.validateblanktext();
-//        Assert.assertEquals();
+        Boolean requiredSerial;
+        requiredSerial = productsPage.asssertBlankValidation();
+       Assert.assertTrue(requiredSerial);
+       System.out.println(requiredSerial);
 
+       Log.info("Verify if the user can enter the details.");
+       productsPage.addSerialNumber(prop.getProperty("serialno"));
+       addToCartPage = productsPage.clickOnUpgrade();
+       Log.info("Verify if the user can navigate to the checkout page.");
+       addToCartPage.proceedToCheckout();
         Log.endTestCase("UpgradePageTest");
 
     }

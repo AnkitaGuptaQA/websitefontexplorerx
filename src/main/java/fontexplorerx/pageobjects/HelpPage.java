@@ -33,23 +33,23 @@ public class HelpPage extends BaseClass {
 
     public HelpPage downloadsButton() throws Throwable {
 //        Action.scrollByVisibilityOfElement(clickOnDownloads);
-        Action.click(getDriver(),clickOnDownloads);
+        Action.fluentWait(getDriver(),clickOnDownloads,3000);
         return new HelpPage();
     }
 
     public fontexplorerx.pageobjects.FreeTrialPage downloadMacBuilds() throws Throwable {
-        Action.click(getDriver(),downloadMacBuild);
+        Action.fluentWait(getDriver(),downloadMacBuild,3000);
         return new fontexplorerx.pageobjects.FreeTrialPage();
     }
 
     public HelpPage downloadWindowsBuilds() throws Throwable{
-        Action.click(getDriver(),downloadWindowsBuild);
+        Action.fluentWait(getDriver(),downloadWindowsBuild,3000);
         Thread.sleep(5000);
         return new HelpPage();
     }
 
     public HelpPage downloasServerBuild() throws Throwable{
-        Action.click(getDriver(),downloadServerBuild);
+        Action.fluentWait(getDriver(),downloadServerBuild,3000);
         Thread.sleep(5000);
         return new HelpPage();
     }

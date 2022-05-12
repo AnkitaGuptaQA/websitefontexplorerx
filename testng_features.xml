@@ -14,6 +14,8 @@
             <class name="fontexplorerx.testcases.HomePageTest"/>
             <class name="fontexplorerx.testcases.LoginPageTest"/>
             <class name="fontexplorerx.testcases.LogOutPageTest"/>
+            <class name="fontexplorerx.testcases.Payment"/>
+            <class name="fontexplorerx.testcases.EditProfilePageTest"/>
 
 
 

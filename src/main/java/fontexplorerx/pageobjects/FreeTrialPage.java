@@ -48,7 +48,7 @@ public class FreeTrialPage extends BaseClass {
     public FreeTrialPage freeTrialForm(String ftrailname, String ftrialemail) throws Throwable {
         Action.type(freename, ftrailname);
         Action.type(freeemail,ftrialemail);
-        Action.click(getDriver(),checkbox);
+        Action.fluentWait(getDriver(),checkbox,3000);
         Action.implicitWait(getDriver(),15);
         Action.fluentWait(getDriver(),downloadft,10);
         Thread.sleep(50);
@@ -57,12 +57,12 @@ public class FreeTrialPage extends BaseClass {
 
     public FreeTrialPage clickDownload() throws Throwable {
         Action.fluentWait(getDriver(),downloadft,5000);
-        Action.click(getDriver(),downloadft);
+        //Action.click(getDriver(),downloadft);
         return new FreeTrialPage();
     }
 
     public FreeTrialPage checkValidation() throws Throwable {
-        Action.click(getDriver(),downloadft);
+        Action.fluentWait(getDriver(),downloadft,3000);
         return new FreeTrialPage();
     }
 

@@ -33,17 +33,17 @@ public class FeaturesPage extends BaseClass {
     }
 
     public ProductPageTest navigateProductPage() throws Throwable {
-        Action.click(getDriver(),navigateProducts);
+        Action.fluentWait(getDriver(),navigateProducts,3000);
         return new ProductPageTest();
     }
 
     public FreeTrialPage navigateFreeTrialPage() throws Throwable {
-        Action.click(getDriver(),navigateFreeTrial);
+        Action.fluentWait(getDriver(),navigateFreeTrial,3000);
         return new FreeTrialPage();
     }
 
     public HelpPageTest navigateHelpPage() throws Throwable {
-        Action.click(getDriver(),navigateHelp);
+        Action.fluentWait(getDriver(),navigateHelp,3000);
         return new HelpPageTest();
     }
 

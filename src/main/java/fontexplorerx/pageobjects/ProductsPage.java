@@ -31,8 +31,13 @@ WebElement buyButton;
     @FindBy(xpath = "//p[normalize-space()='Serial Number is required.']")
     WebElement blankVerification;
 
+
     @FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/section[1]/div[2]/div[1]/section[1]/div[1]/form[1]/input[1]")
     WebElement upgradeButton;
+
+
+    @FindBy(xpath = "//input[@id='sn']")
+    WebElement serialNumber;
 
     @FindBy(xpath = "//h1[normalize-space()='Special offers for Students and Educators.']")
     WebElement studentTitle;
@@ -49,7 +54,7 @@ WebElement buyButton;
     }
 
     public AddToCartPage clickOnProButton() throws Throwable {
-        Action.click(getDriver(),proBuyButton);
+        Action.fluentWait(getDriver(),proBuyButton,3000);
         return new AddToCartPage();
     }
     public AddToCartPage clickOnBuyButton() throws Throwable {
@@ -61,6 +66,7 @@ WebElement buyButton;
     public ProductPageTest clickOnUpgradeButton() throws Throwable{
         Action.scrollByVisibilityOfElement(upgradeBuyButton);
         Action.click(getDriver(),upgradeBuyButton);
+//        Action.fluentWait(getDriver(),upgradeBuyButton,3000);
         return new ProductPageTest();
     }
 
@@ -70,16 +76,25 @@ WebElement buyButton;
         return new AddToCartPage();
     }
 
-    public String verifyUpgradeTitle() throws Throwable{
-        String upgradeTitle = upgradetitlw.getText();
-        return upgradeTitle;
+    public boolean verifyUpgradeTitle() throws Throwable{
+       return Action.isDisplayed(getDriver(),upgradetitlw);
+
     }
 
-    public ProductPageTest validateblanktext() throws Throwable {
-        Action.click(getDriver(),upgradeButton);
-        Action.isDisplayed(getDriver(),blankVerification);
-        return new ProductPageTest();
+    public ProductsPage validateblanktext() throws Throwable {
+        Action.fluentWait(getDriver(),upgradeButton,3000);
+        return new ProductsPage();
     }
+
+    public boolean asssertBlankValidation() throws Throwable{
+       return Action.isDisplayed(getDriver(),blankVerification);
+    }
+
+    public AddToCartPage clickOnUpgrade() throws  Throwable{
+        Action.fluentWait(getDriver(),upgradeButton,3000);
+        return new AddToCartPage();
+    }
+
 
     public String verifyStudentPageTitle(){
         String studenttitle = studentTitle.getText();
@@ -87,8 +102,12 @@ WebElement buyButton;
     }
 
     public AddToCartPage clickOnStudentBuyButton() throws Throwable {
-        Action.scrollByVisibilityOfElement(studentBuyButton);
-        Action.click(getDriver(),studentBuyButton);
+        //Action.scrollByVisibilityOfElement(studentBuyButton);
+        Action.fluentWait(getDriver(),studentBuyButton,3000);
         return new AddToCartPage();
+    }
+    public ProductsPage addSerialNumber(String serialno) throws Throwable{
+        Action.type(serialNumber,serialno);
+        return new ProductsPage();
     }
 }

@@ -58,7 +58,7 @@ public class ContactPage extends BaseClass {
         return new ContactPage();
     }
     public ContactPage submitForm() throws Throwable{
-        Action.click(getDriver(),clickOnSubmit);
+        Action.fluentWait(getDriver(),clickOnSubmit,3000);
         return new ContactPage();
     }
 

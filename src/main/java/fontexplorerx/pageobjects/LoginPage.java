@@ -58,15 +58,22 @@ public class LoginPage extends BaseClass{
         Action.isDisplayed(BaseClass.getDriver(),loginTitle);
         Action.type(email, uemail);
         Action.type(password, Upassword);
-        Action.click(BaseClass.getDriver(),signInButton);
+        Action.fluentWait(getDriver(),signInButton,3000);
         return new HomePage();
     }
     public CheckoutPage login1(String uemail, String Upassword) throws Throwable {
         Action.isDisplayed(BaseClass.getDriver(),loginTitle);
         Action.type(email, uemail);
         Action.type(password, Upassword);
-        Action.click(BaseClass.getDriver(),signInButton);
+        Action.fluentWait(BaseClass.getDriver(),signInButton,3000);
         return new CheckoutPage();
+    }
+    public EditProfilePage login2(String uemail, String Upassword) throws Throwable {
+        Action.isDisplayed(BaseClass.getDriver(),loginTitle);
+        Action.type(email, uemail);
+        Action.type(password, Upassword);
+        Action.fluentWait(BaseClass.getDriver(),signInButton,3000);
+        return new EditProfilePage();
     }
     public boolean validateloginPageTitle() throws Throwable {
         return Action.isDisplayed(BaseClass.getDriver(),loginTitle);
@@ -89,7 +96,7 @@ public class LoginPage extends BaseClass{
         return new HomePage();
     }
     public ForgotPasswordPage clickOnForgotPassword() throws Throwable {
-        Action.click(getDriver(),forgotPasswordButton);
+        Action.fluentWait(getDriver(),forgotPasswordButton,3000);
         return new ForgotPasswordPage();
     }
 }
