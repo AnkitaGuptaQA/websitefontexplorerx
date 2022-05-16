@@ -43,7 +43,7 @@ public class Payment extends BaseClass {
     indexPage = new IndexPage();
     productsPage = indexPage.clickOnProduct();
     productsPage.clickOnStudent();
-    addToCartPage = productsPage.clickOnStudentBuyButton();
+   addToCartPage = productsPage.clickOnStudentBuyButton();
     loginPage = addToCartPage.proceedToCheckout();
     checkoutPage = loginPage.login1(prop.getProperty("username"), prop.getProperty("password") );
     checkoutPage.clickOnCreditCard();

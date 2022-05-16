@@ -103,8 +103,9 @@ WebElement buyButton;
     }
 
     public AddToCartPage clickOnStudentBuyButton() throws Throwable {
-        //Action.scrollByVisibilityOfElement(studentBuyButton);
-        Action.fluentWait(getDriver(),studentBuyButton,3000);
+        Action.scrollByVisibilityOfElement(studentBuyButton);
+        Action.click(getDriver(),studentBuyButton);
+//        Action.fluentWait(getDriver(),studentBuyButton,3000);
         return new AddToCartPage();
     }
     public ProductsPage addSerialNumber(String serialno) throws Throwable{
