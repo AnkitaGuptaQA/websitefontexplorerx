@@ -42,6 +42,7 @@ WebElement buyButton;
     @FindBy(xpath = "//h1[normalize-space()='Special offers for Students and Educators.']")
     WebElement studentTitle;
 
+
     @FindBy(xpath = "//input[@value='Buy']")
     WebElement studentBuyButton;
 
@@ -96,9 +97,9 @@ WebElement buyButton;
     }
 
 
-    public String verifyStudentPageTitle(){
-        String studenttitle = studentTitle.getText();
-        return studenttitle;
+    public boolean verifyStudentPageTitle() throws Throwable {
+      return   Action.isDisplayed(getDriver(),studentTitle);
+
     }
 
     public AddToCartPage clickOnStudentBuyButton() throws Throwable {
