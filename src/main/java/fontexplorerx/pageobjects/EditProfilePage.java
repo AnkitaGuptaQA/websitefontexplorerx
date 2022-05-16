@@ -76,6 +76,10 @@ public class EditProfilePage extends BaseClass {
     public EditProfilePage changePasswordLoginData(String password, String conpassword) throws Throwable{
         Action.type(newPassword,password);
         Action.type(confirmPassword,conpassword);
+        return new EditProfilePage();
+    }
+
+    public EditProfilePage clickOnChangePassword() throws Throwable{
         Action.fluentWait(getDriver(),saveButtonPassword,3000);
         return new EditProfilePage();
     }

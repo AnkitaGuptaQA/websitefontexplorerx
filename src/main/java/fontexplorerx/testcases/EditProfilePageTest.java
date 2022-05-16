@@ -47,6 +47,7 @@ public class EditProfilePageTest extends BaseClass {
         editProfilePage.clickOnLoginData();
         Log.info("Change the password.");
         editProfilePage.changePasswordLoginData(prop.getProperty("password"), prop.getProperty("conpassword") );
+        editProfilePage.clickOnChangePassword();
         Boolean confirmationmessage;
         confirmationmessage = editProfilePage.verifyConfirmation();
         Assert.assertTrue(confirmationmessage);
